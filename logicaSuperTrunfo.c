@@ -59,6 +59,21 @@ int main() {
         printf("Densidade Populacional: %.2f hab/km²\n", densidades[i]);
         printf("PIB per capita: %.6f bilhões/hab\n", pibPerCapita[i]);
     }
+     // Comparação entre duas cartas pré-definidas
+    int carta1 = 2; // índice da primeira carta (exemplo: A03)
+    int carta2 = 5; // índice da segunda carta (exemplo: B02)
 
+    printf("\n=== Comparação de Cartas (Atributo: PIB per capita) ===\n");
+    printf("Carta 1 - %s: %.6f bilhões/hab\n", codigos[carta1], pibPerCapita[carta1]);
+    printf("Carta 2 - %s: %.6f bilhões/hab\n", codigos[carta2], pibPerCapita[carta2]);
+
+    // Lógica de decisão usando if-else
+    if (pibPerCapita[carta1] > pibPerCapita[carta2]) {
+        printf("Resultado: Carta 1 (%s) venceu! (Tem o maior PIB per capita))\n", codigos[carta1]);
+    } else if (pibPerCapita[carta2] > pibPerCapita[carta1]) {
+        printf("Resultado: Carta 2 (%s) venceu!(Tem o maior PIB per capita)\n", codigos[carta2]);
+    } else {
+        printf("Resultado: Empate!\n");
+    }
     return 0;
 }
